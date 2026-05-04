@@ -72,6 +72,10 @@ cp -R /path/to/repo/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
 
 后续查看经验或进化状态时，直接对 Codex 说“检查我的 pet 经验”或“我的 pet 现在能进化吗？”即可。
 
+## 开源协议
+
+MIT License。
+
 ## 项目初衷
 
 我们这一代 90 后、95 后，小时候大概率都看过《数码宝贝》。如今我们也从“被选召的孩子”的年纪，长到了及川悠纪夫、山木满雄和李镇宇他们那样的大人年纪。

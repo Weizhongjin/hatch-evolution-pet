@@ -72,6 +72,10 @@ That is enough for the skill to initialize machinespace, collect identity detail
 
 For progression checks, ask Codex naturally, for example: "Check my pet XP" or "Can my pet evolve now?"
 
+## License
+
+MIT License.
+
 ## Personal Notes
 
 For those of us born in the 90s and mid-to-late 90s, there is a good chance that *Digimon* was part of our childhood. We have grown from the age of the "Chosen Children" into the age of adults like Yukio Oikawa, Mitsuo Yamaki, and Lee Janyuu.
