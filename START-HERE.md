@@ -9,6 +9,12 @@ Core documents:
 - Spec: `docs/specs/2026-05-04-evolvable-pet-design.md`
 - Plan: `docs/plans/2026-05-04-evolvable-pet.md`
 
+Current repository layout:
+
+- Project README and showcase assets live at the repository root.
+- The installable Codex skill lives in `hatch-evolution-pet/`.
+- To install, copy `hatch-evolution-pet/` to `~/.codex/skills/hatch-evolution-pet/`.
+
 Immediate implementation target:
 
 1. Create the new `hatch-evolution-pet` skill structure.

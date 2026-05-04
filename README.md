@@ -21,12 +21,16 @@ An evolvable replacement for [`hatch-pet`](https://github.com/openai/skills/tree
 | ![Gigimon](assets/readme/gigimon-preview.png) | ![GigiRookie](assets/readme/gigirookie-preview.png) |
 | `gigi` / `Gigimon` | `gigi-stage-1` / `GigiRookie` |
 
+Both forms are normal selectable Codex pets:
+
+![Codex pet picker showing multiple forms](assets/readme/codex-pet-picker.png)
+
 ## Rules
 
 - Desktop-facing pet packages live in `~/.codex/pets/`.
 - Runtime state lives in `~/.codex/pet-machinespace/`.
 - Main ledger: `~/.codex/pet-machinespace/evolution-state.json`.
-- Evolution rules live in `rules/pet-system-rules.md`.
+- Evolution rules live in `hatch-evolution-pet/rules/pet-system-rules.md`.
 - `AGENTS.md` should only contain a lightweight hook pointing to the rules file.
 - Evolution is additive: a new form is unlocked, not used to overwrite an old form.
 
@@ -45,10 +49,10 @@ The pet gains XP from daily Codex usage. More token usage gives more XP, but eac
 
 ## Quickstart
 
-Install this skill by placing this directory under `~/.codex/skills/`:
+Install the skill by copying the `hatch-evolution-pet/` skill folder into `~/.codex/skills/`:
 
 ```bash
-cp -R /path/to/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
+cp -R /path/to/repo/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
 ```
 
 Restart Codex or start a new conversation so the skill list refreshes.

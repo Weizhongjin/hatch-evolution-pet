@@ -21,12 +21,16 @@
 | ![Gigimon](assets/readme/gigimon-preview.png) | ![GigiRookie](assets/readme/gigirookie-preview.png) |
 | `gigi` / `Gigimon` | `gigi-stage-1` / `GigiRookie` |
 
+两个形态都会作为普通 Codex pet 出现在自定义宠物选择界面：
+
+![Codex pet picker showing multiple forms](assets/readme/codex-pet-picker.png)
+
 ## 规则
 
 - Desktop 可选择 pet 包放在 `~/.codex/pets/`。
 - 运行时状态放在 `~/.codex/pet-machinespace/`。
 - 主 ledger 是 `~/.codex/pet-machinespace/evolution-state.json`。
-- 进化规则放在 `rules/pet-system-rules.md`。
+- 进化规则放在 `hatch-evolution-pet/rules/pet-system-rules.md`。
 - `AGENTS.md` 只加轻量 hook，指向规则文件。
 - 进化是新增形态，不覆盖旧形态。
 
@@ -45,10 +49,10 @@ pet 会根据每天使用 Codex 的情况获得 XP。使用越多、token 越多
 
 ## 快速开始
 
-把这个目录安装到 `~/.codex/skills/` 下：
+把 `hatch-evolution-pet/` 这个 skill 文件夹复制到 `~/.codex/skills/` 下：
 
 ```bash
-cp -R /path/to/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
+cp -R /path/to/repo/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
 ```
 
 重启 Codex 或开启一个新对话，让 skill 列表刷新。
