@@ -57,7 +57,7 @@ Then use the skill in Codex:
 
 ```text
 [$hatch-evolution-pet](~/.codex/skills/hatch-evolution-pet/SKILL.md)
-I want to create an evolving pet named gigi. Use this reference image and make it grow toward stronger dragon forms.
+我要创建一个属于的 pet，我希望他叫小基基，实际是数码宝贝第三部中主角基尔兽的幼年体基基兽。图片可以参考，进化路线参考数码宝贝进化的风格，应该是基尔兽、古拉兽、大古拉兽、红莲骑士兽这样，越来越强，越来越帅。
 ```
 
 Example creation prompt:
@@ -70,4 +70,10 @@ For progression checks, ask Codex naturally, for example: "Check my pet XP" or "
 
 ## Personal Notes
 
-> Reserved for project motivation and personal notes.
+For those of us born in the 90s and mid-to-late 90s, there is a good chance that *Digimon* was part of our childhood. We have grown from the age of the "Chosen Children" into the age of adults like Yukio Oikawa, Mitsuo Yamaki, and Lee Janyuu.
+
+But when I first saw the tiny pixel-style Codex pet, the first thing that flashed through my mind was the moment Guilmon was born. In that instant, I suddenly felt that the real Digital World might already be here. It does not look exactly like the world we saw in the anime when we were kids, but it awakened that same childhood dream in me: to have a digital partner that truly belongs to me, an AI companion that stays with me and grows alongside me.
+
+This project started from that feeling. It brought back the imagination I had as a child about the Digital World, and it made me feel that maybe this is only a very small beginning.
+
+I hope that, in the future, more people can build together in the age of AI and create a Digital World that belongs to this new era, and to all of us.

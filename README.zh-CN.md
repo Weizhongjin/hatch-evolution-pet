@@ -57,7 +57,7 @@ cp -R /path/to/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
 
 ```text
 [$hatch-evolution-pet](~/.codex/skills/hatch-evolution-pet/SKILL.md)
-我要创建一个会进化的 pet，名字叫 gigi。参考这张图，进化方向是越来越强的龙系形态。
+我要创建一个属于的 pet，我希望他叫小基基，实际是数码宝贝第三部中主角基尔兽的幼年体基基兽。图片可以参考，进化路线参考数码宝贝进化的风格，应该是基尔兽、古拉兽、大古拉兽、红莲骑士兽这样，越来越强，越来越帅。
 ```
 
 创建提示示例：
