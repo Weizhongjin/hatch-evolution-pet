@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hatch Evolution Pet"
+  short_description: "Create and evolve Codex pets with persistent progression"
+  default_prompt: "Create or evolve a Codex-compatible animated pet using the hatch-evolution-pet workflow. Read the pet system rules, initialize machinespace under ${CODEX_HOME:-$HOME/.codex}/pet-machinespace, collect companion identity fields, confirm base art before full generation, package unlocked forms under ${CODEX_HOME:-$HOME/.codex}/pets, and keep progression state in the evolution ledger."
