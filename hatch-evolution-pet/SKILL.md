@@ -11,11 +11,35 @@ Create a Codex-compatible animated pet from a concept, one or more reference ima
 
 User-facing inputs are optional. If the user omits a pet name, infer one from the concept or reference filenames; if that is not possible, choose a short appropriate name. If the user omits a description, infer one from the concept or references. If the user omits reference images, generate the base pet from text first, then use that base as the canonical reference for every animation row.
 
-This skill also owns persistent evolution state. Always read `rules/pet-system-rules.md` before create, prompt, progression, sync, or evolution actions. Keep growth state, lineage data, evolution briefs, references, and generation history under `~/.codex/pet-machinespace/`; keep Desktop-facing unlocked pet packages under `~/.codex/pets/`.
+This skill also owns persistent evolution state. Always read `rules/pet-system-rules.md` before create, prompt, progression, sync, automation, or evolution actions. Keep growth state, lineage data, evolution briefs, references, and generation history under `~/.codex/pet-machinespace/`; keep Desktop-facing unlocked pet packages under `~/.codex/pets/`.
 
 Before writing profile data, initialize machinespace with `scripts/pet_state.py --init` or another command that calls the shared state helpers. During create/evolve flows, collect and store the companion name, form name, origin/background, core personality, must-keep visual anchors, and growth tendency before relying on them for future evolution suggestions.
 
 Evolution forms are additive. Do not delete or replace older forms unless the user explicitly asks.
+
+## Progression Sync And Automation
+
+Before reporting XP, level, or evolution readiness, sync likely missing completed recent usage days with the bundled progression script, then re-read `~/.codex/pet-machinespace/evolution-state.json`. Use one batch/range command so the script's lock can serialize state writes:
+
+```bash
+SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/hatch-evolution-pet"
+python "$SKILL_DIR/scripts/pet_progression.py" --sync-range YYYY-MM-DD YYYY-MM-DD
+```
+
+Normal status checks should not settle the current in-progress local day. A daily automation that runs near the end of the day may include the current day:
+
+```bash
+python "$SKILL_DIR/scripts/pet_progression.py" --sync-range YYYY-MM-DD YYYY-MM-DD --include-today
+```
+
+When the user asks for automatic XP sync, daily settlement, recurring progression checks, or a reminder to keep pet XP updated, use the host Codex automation capability when available. Prefer a daily local-time automation named `Sync pet XP daily`, scheduled near the end of the day, with this task shape:
+
+- Read this skill's `rules/pet-system-rules.md`.
+- Run the locked progression sync for the intended date range, using `--include-today` only because the automation runs near day end.
+- Re-read the evolution ledger.
+- Report the active pet, XP, level, daily usage entries touched, whether `upgradeReady` is true, and the next milestone.
+
+If automation tooling is unavailable in the current environment, tell the user the skill supports the workflow but this Codex surface cannot create the recurring task directly.
 
 ## Generation Delegation
 

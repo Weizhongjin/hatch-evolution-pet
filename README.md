@@ -72,6 +72,8 @@ That is enough for the skill to initialize machinespace, collect identity detail
 
 For progression checks, ask Codex naturally, for example: "Check my pet XP" or "Can my pet evolve now?"
 
+You can also ask Codex to create a daily automatic XP sync, for example: "Set up daily pet XP sync."
+
 ## License
 
 MIT License.

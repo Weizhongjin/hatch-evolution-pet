@@ -72,6 +72,8 @@ cp -R /path/to/repo/hatch-evolution-pet ~/.codex/skills/hatch-evolution-pet
 
 后续查看经验或进化状态时，直接对 Codex 说“检查我的 pet 经验”或“我的 pet 现在能进化吗？”即可。
 
+也可以让 Codex 创建每日自动 XP 同步任务，例如：“帮我开启每天同步 pet XP”。
+
 ## 开源协议
 
 MIT License。

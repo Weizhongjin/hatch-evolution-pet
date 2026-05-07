@@ -45,6 +45,14 @@
 - Do not settle the current in-progress local day during normal status checks. Daily automation may settle the current day near the end of the day by passing `--include-today`.
 - Treat XP sync as a serialized state mutation. Do not run multiple per-date sync commands in parallel; use one locked batch/range sync command instead.
 
+## Automation Rules
+
+- When the user asks for automatic XP sync, daily settlement, recurring progression checks, or reminder-style XP maintenance, offer to create or update a Codex automation if the current environment supports automations.
+- Prefer a daily local-time automation near the end of the day named `Sync pet XP daily`.
+- The automation must read this rules file, run a locked `pet_progression.py --sync-range ... --include-today` sync, re-read `evolution-state.json`, and report active pet, XP, level, touched dates, `upgradeReady`, and the next milestone.
+- Do not create multiple duplicate daily sync automations; update an existing matching one when possible.
+- If automation tooling is unavailable, explain that the skill supports the workflow but the current Codex surface cannot install the recurring task directly.
+
 ## Evolution Reminder Rules
 
 - A pet becomes evolution-ready when its level reaches the next configured evolution milestone.
