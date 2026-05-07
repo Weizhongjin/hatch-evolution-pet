@@ -41,6 +41,9 @@
 - After the first ignored evolution reminder, final awarded XP is reduced by 50%.
 - XP is global by day across Codex Desktop usage, not per project and not per thread.
 - Never double-award XP for a date that is already recorded in `dailyUsage`.
+- Before reporting XP, level, or evolution readiness, sync likely missing completed recent usage dates, then re-read the evolution ledger.
+- Do not settle the current in-progress local day during normal status checks. Daily automation may settle the current day near the end of the day by passing `--include-today`.
+- Treat XP sync as a serialized state mutation. Do not run multiple per-date sync commands in parallel; use one locked batch/range sync command instead.
 
 ## Evolution Reminder Rules
 
@@ -65,4 +68,3 @@
 - Ground suggestions in the existing line profile, current form, must-keep traits, unlocked forms, and prior choices.
 - Confirm evolution base art before full generation.
 - Add each new unlocked form to `~/.codex/pets/` as a normal Desktop-facing package.
-
